@@ -1,10 +1,27 @@
 # INF1045-201-18A-02
 
+## Devoirs:
+
+
+## Resultats d'Apprentissage du Cours
+
+|No|L'etudiant(e) aura demontre, de facon fiable, sa capacite a:      |          Elements de performance                               | 
+|--|------------------------------------------------------------------|:---------------------------------------------------------------| 
+| 1| installater un systeme d'exploitation                            | Savoir:                                                        | 
+|  |                                                                  | Savoir Faire:                                                  | 
+|  |                                                                  | Savoir Etre:                                                   | 
+| 2| Planifier les services                                           | Savoir:                                                        | 
+|  |                                                                  | Savoir Faire:                                                  | 
+|  |                                                                  | Savoir Etre:                                                   | 
+
+## Elements de Performance
+
+|No| Date   | Cours                       | Intitulé                                |  Pratique .                            |
+|--|--------|:----------------------------|:----------------------------------------|:---------------------------------------|
+| 1|04-09-18| (*)                         | Rentree des classes                     |                                        |
 
 
 
-
-
-# Reference
+# References
 
 [aws_summit_toronto_2018](https://aws.amazon.com/fr/summits/toronto/?sc_channel=em&sc_campaign=global_EV_awssummit_toronto_2018&sc_medium=em_109942&sc_content=event_ev_summit&sc_geo=mult&sc_country=global&sc_outcome=event&trkCampaign=aws_summit_toronto_2018)
