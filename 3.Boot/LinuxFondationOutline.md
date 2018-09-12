@@ -120,6 +120,7 @@ APT
 *Labs  
 
 ## User and Group Account Management
+```
 User Accounts
 Management
 Passwords
@@ -180,3 +181,4 @@ Virtual Consoles
 Rescue Media and Troubleshooting
 System Rescue and Recovery
 Labs
+```
