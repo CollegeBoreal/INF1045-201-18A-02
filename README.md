@@ -5,7 +5,6 @@
 |No| Date   | Cours                       | Intitulé                                |  Pratique .                            |
 |--|--------|:----------------------------|:----------------------------------------|:---------------------------------------|
 | 1|17-09-18| [3.Boot](./3.Boot)          | Installer Ubuntu 18.04                  | Démontrer l'installation par un blog (i.e. http://wordpress.com  ) |
-| 2|31-10-18| Chapitre 3                  | Accéder a sa machine                    | Chapitre 3 installer votre clé publique sur votre machine  (dans le labo) |
 
 
 ## Resultats d'Apprentissage du Cours
