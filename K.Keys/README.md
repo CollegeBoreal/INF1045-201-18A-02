@@ -1,5 +1,11 @@
 # Partage de clés
 
+Rajouter la clé publique dans le fichier suivant
+
+```
+$ vi ~/.ssh/authorized_keys
+```
+
 
 | ID      |    Host        |
 |---------|----------------|
