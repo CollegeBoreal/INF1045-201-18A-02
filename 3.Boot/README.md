@@ -14,3 +14,7 @@
 ### Training
 https://training.linuxfoundation.org/linux-courses/system-administration-training/linux-system-administration
 
+### MBR vs GPT
+
+https://www.quora.com/What-is-the-difference-between-an-MBR-and-GPT-partition
+
