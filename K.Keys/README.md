@@ -67,10 +67,10 @@ Host github.com
 Host labo6
  HostName 10.13.237.6
  User root
- IdentityFile ~/.ssh/tsihombe_rsa
+ IdentityFile ~/.ssh/tsihombe.pk
 
 Host labo5
  HostName 10.13.237.5
  User root
- IdentityFile ~/.ssh/tsihombe_rsa
+ IdentityFile ~/.ssh/tsihombe.pk
 ```
