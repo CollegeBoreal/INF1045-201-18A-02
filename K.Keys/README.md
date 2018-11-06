@@ -54,3 +54,23 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE6rN9uK1HSQB28FY+ruYL2Z/m4R77SkY3RmK6Httj
 ```` 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCuu/XjIkDSxEX47DigRWezCrXXpG6jC6VVmVV1EbcoCqVxbPeeWBpFZ5iCe/AP8/lTKuQnn54p6k6DkcHiegqz9FFLAd2XRbQiRRyxDmJMxsNj5AJrEUxcmDtTvqaDdHd+VGLK/81uIZ11JVAuBBOnJCKOTdxMnWUpRcFXkXkSLvREAiNy889c9XPm2Sbra9egYlHsITpT8padnZPqGrqNBRQkB+qO1uwSxjkjBW+A2yUgshtaIqFc1K/P1o2RjZpFBNhp+5Sb/4NM3yNybIB2mxdYZc0OPd6LMC4sYJPhl/AbHPccdx77NRLAE5zVTslxlJQ/Buq//SYQcwGW5S37 chera@Diallo
 ```` 
+
+# Gestion des cles
+
+```
+$ cat ~/.ssh/config 
+Host github.com
+ HostName github.com
+ User git
+ IdentityFile ~/.ssh/github.com.pk
+
+Host labo6
+ HostName 10.13.237.6
+ User root
+ IdentityFile ~/.ssh/tsihombe_rsa
+
+Host labo5
+ HostName 10.13.237.5
+ User root
+ IdentityFile ~/.ssh/tsihombe_rsa
+```
