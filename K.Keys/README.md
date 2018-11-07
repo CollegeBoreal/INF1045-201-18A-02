@@ -71,6 +71,6 @@ Host labo6
 
 Host labo5
  HostName 10.13.237.5
- User root
+ User brice
  IdentityFile ~/.ssh/tsihombe.pk
 ```
