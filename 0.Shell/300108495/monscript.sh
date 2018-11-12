@@ -1,6 +1,8 @@
+
 #!/bin/sh
 
-for file in *
+for file in f*
 do
   mv "$file" "${file%}.txt"
 done
+
