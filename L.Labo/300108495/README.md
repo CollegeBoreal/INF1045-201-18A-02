@@ -2,6 +2,7 @@
 
  MediaWiki est un excellent moyen d’illustrer le processus de construction d’un
 serveur Web (souvent appelé serveur LAMP) sous Linux.
+
 # Statique ou Dinamique SiteWeb??
 
 Le serveur LAMP est une configuration Linux si commune qu’Ubuntu. Le caret (^) à la fin de cet exemple identifie le
@@ -16,7 +17,7 @@ déposez un serveur Web actif sur votre système, ne laissant rien à faire
 en plus de créer du contenu de site Web. Diriger votre navigateur Web vers l’IP du serveur
 address devrait afficher une page d'accueil créée lors de l'installation d'Apache.
 
-### Mais Attention ! 
+### Mais Attention :bangbang:
 
 Mais l’automatisation n’est pas toujours la meilleure solution. Parfois, vous aurez envie de personnaliser
 votre pile de logiciels en spécifiant des versions particulières pour assurer l'application
@@ -40,13 +41,14 @@ $ docker-machinne ssh CB-DEV
 # Steps:
 
 Voici une liste de ce que vous devez faire pour atteindre votre objectif:
-1 Installez Apache
 
-2 Installez le langage de script PHP(7.0.0) côté serveur.
+:one: Installez Apache
 
-3 Installez un moteur SQL (mysql dans ce cas)
+:two: Installez le langage de script PHP(7.0.0) côté serveur.
 
-4 Installer et configurer MediaWiki
+:three: Installez un moteur SQL (mysql dans ce cas)
+
+:four: Installer et configurer MediaWiki
 
 # 1st step : Install Apache2 
 
@@ -118,8 +120,8 @@ Premierment, il faut telecharger le pqauet de MediaWiki que tu peux le faire ave
 $ wget https://releases.wikimedia.org/mediawiki/1.30/\
 mediawiki-1.30.0.tar.gz
 ```
-===> 
-NOTE Si vous obtenez une erreur -bash: wget: Command Not Found lors de l'exécution du
+ 
+:arrow_right: NOTE Si vous obtenez une erreur -bash: wget: Command Not Found lors de l'exécution du
 commande précédente, vous devrez installer wget.
 
 L’exécution de ``` tar ``` sur l’archive téléchargée crée un nouveau répertoire contenant toutes les
