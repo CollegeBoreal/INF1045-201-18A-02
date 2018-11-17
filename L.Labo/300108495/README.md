@@ -125,7 +125,7 @@ $ ls
 mediawiki-1.30.0 mediawiki-1.30.0.tar.gz
 $ sudo cp -r mediawiki-1.30.0/* /var/www/html/
 ```
-Congratulation Vous ete presque finis !! 
+:ok_hand: Congratulation Vous ete presque finis !! 
 Mais C'est quoi ca ?
 Et voila, Il faut ecrire dans votre navigateur 10.13.237.X/index.php
 qui va vous montrer cette page :
