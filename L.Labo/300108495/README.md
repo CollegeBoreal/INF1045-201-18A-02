@@ -58,7 +58,7 @@ $ sudo apt install apache2
 L’URL que vous utiliserez pour accéder à un site Apache exécuté sur votre poste de travail.
 est localhost. Si, à la place, vous avez choisi de travailler sur un conteneur LXC ou Virtual
 Box VM, vous utiliserez l’adresse IP de la machine pour l’URL.
-pic
+![Alt tag](apache.png)
 
  # 2nd step : Install PHP
  
@@ -92,7 +92,7 @@ A cette etape vous devez configurer le password de votre conteneur mysql
 ```
 $ sudo apt install mysql-server
 ```
-pic 
+![Alt tag](sql.png)
 
 Acceder a votre conteneur
 
@@ -129,7 +129,7 @@ Congratulation Vous ete presque finis !!
 Mais C'est quoi ca ?
 Et voila, Il faut ecrire dans votre navigateur 10.13.237.X/index.php
 qui va vous montrer cette page :
-pic
+![Alt tag](wiki1.png)
 
 Alors pour finir ce travail je dois installer les composants 
 
@@ -153,8 +153,11 @@ $ sudo systemctl restart apache2
 $ sudo apt install php-mysql php-apcu php-imagick
 $ sudo systemctl restart apache2
 ```
-pic (welcome)
+![Alt tag](wiki2.png)
 
 ## Connecter MediaWiki à la base de données :
 C'est tres Simple Il faut juste que tu follow les instructions 
+![Alt tag](wiki3.png)
+![Alt tag](wiki4.png)
+![Alt tag](wiki5.png)
 
