@@ -15,6 +15,7 @@ Cette commande, après vous avoir demandé de créer un mot de passe de base de 
 déposez un serveur Web actif sur votre système, ne laissant rien à faire
 en plus de créer du contenu de site Web. Diriger votre navigateur Web vers l’IP du serveur
 address devrait afficher une page d'accueil créée lors de l'installation d'Apache.
+
 ### Mais Attention ! 
 
 Mais l’automatisation n’est pas toujours la meilleure solution. Parfois, vous aurez envie de personnaliser
@@ -23,7 +24,9 @@ compatibilité, ou en substituant un paquet à un autre (MariaDB sur MySQL, pour
 exemple, comme vous le verrez bientôt).
 
 C'est pourquoi j'ai décidé de vous montrer comment le configurer manuellement.
+
 ### SSH :
+
 comme vous connaissez, vous avez le choix d'ou vous pouvez installer votre Wiki si C'est dans votre serveur (genericVM)
 voici la commande :
 ```
@@ -38,8 +41,11 @@ $ docker-machinne ssh CB-DEV
 
 Voici une liste de ce que vous devez faire pour atteindre votre objectif:
 1 Installez Apache
+
 2 Installez le langage de script PHP(7.0.0) côté serveur.
+
 3 Installez un moteur SQL (mysql dans ce cas)
+
 4 Installer et configurer MediaWiki
 
 # 1st step : Install Apache2 
@@ -58,6 +64,7 @@ $ sudo apt install apache2
 L’URL que vous utiliserez pour accéder à un site Apache exécuté sur votre poste de travail.
 est localhost. Si, à la place, vous avez choisi de travailler sur un conteneur LXC ou Virtual
 Box VM, vous utiliserez l’adresse IP de la machine pour l’URL.
+
 ![Alt tag](apache.png)
 
  # 2nd step : Install PHP
@@ -125,16 +132,20 @@ $ ls
 mediawiki-1.30.0 mediawiki-1.30.0.tar.gz
 $ sudo cp -r mediawiki-1.30.0/* /var/www/html/
 ```
-:ok_hand: Congratulation Vous ete presque finis !! 
+:tada: Congratulation Vous ete presque finis !! 
+
 Mais C'est quoi ca ?
+
 Et voila, Il faut ecrire dans votre navigateur 10.13.237.X/index.php
 qui va vous montrer cette page :
+
 ![Alt tag](wiki1.png)
 
 Alors pour finir ce travail je dois installer les composants 
 
 
 J'utiliserai ``` apt search ``` pour voir quels paquets sont liés à mbstring.
+
 ```
 $ sudo apt search mbstring
 Sorting... Done
@@ -153,11 +164,16 @@ $ sudo systemctl restart apache2
 $ sudo apt install php-mysql php-apcu php-imagick
 $ sudo systemctl restart apache2
 ```
+
 ![Alt tag](wiki2.png)
+
 
 ## Connecter MediaWiki à la base de données :
 C'est tres Simple Il faut juste que tu follow les instructions 
+
 ![Alt tag](wiki3.png)
+
 ![Alt tag](wiki4.png)
+
 ![Alt tag](wiki5.png)
 
