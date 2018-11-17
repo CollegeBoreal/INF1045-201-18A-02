@@ -50,7 +50,7 @@ Voici une liste de ce que vous devez faire pour atteindre votre objectif:
 
 :four: Installer et configurer MediaWiki
 
-# 1st step : Install Apache2 
+# :one: st step : Install Apache2 
 
 Le serveur HTTP open source Apache tend à dominer
 le marché des serveurs Web sur toutes les plateformes. Parce qu’il est si populaire, et malgré le
@@ -69,7 +69,7 @@ Box VM, vous utiliserez l’adresse IP de la machine pour l’URL.
 
 ![Alt tag](apache.png)
 
- # 2nd step : Install PHP
+ # :two: nd step : Install PHP
  
 PHP (langage de script) est un outil qui peut être
 utilisé pour écrire vos propres applications web. Les applications PHP prédéfinies sont souvent utilisées par
@@ -94,7 +94,7 @@ vous pouvez ecrire une simple paragraphe afin de tester le php
 ```
 et vous pouvez le tester avec l URL de localhost/test.php
 
-# 3rd Step : Install Mysql
+# :three: rd Step : Install Mysql
 
 A cette etape vous devez configurer le password de votre conteneur mysql
 
@@ -113,7 +113,7 @@ mysql> CREATE DATABASE wiki;
 mysql> SHOW DATABASES;
 mysql> exit
 ```
-# 4rd Step : Installer et configurer MediaWiki
+# :four: rd Step : Installer et configurer MediaWiki
 
 Premierment, il faut telecharger le pqauet de MediaWiki que tu peux le faire avec ce siteweb (www.mediawiki.org/wiki/Download) ou bien avec  la commande suivante :
 ```
