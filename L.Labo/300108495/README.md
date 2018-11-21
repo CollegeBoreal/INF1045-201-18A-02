@@ -35,7 +35,11 @@ $ ssh name@10.13.237.10.X
 ```
 Et si vous aves le choix de l'installer sur votre machine virtuelle (CB-DEV) vous devez utilisez cette commande :
 ```
-$ docker-machinne ssh CB-DEV
+$ docker-machine ssh CB-DEV
+```
+Et n'oublie pas pour savoir le nom ou l'adresse IP de votre machine virtuelle vous devez taper cette commande :
+```
+$ docker-machine ls
 ```
 
 # Steps:
@@ -85,25 +89,18 @@ vous pouvez changer aussi le fichier mais il faust recommencer Apache2
 
 ```
 $ sudo /etc/init.d/apache2 restart
-$ sudo nano var/www/html/test.php
 ```
-vous pouvez ecrire une simple paragraphe afin de tester le php 
-
-```
-<?php> echo 'IT WOKRS'; ?>
-```
-et vous pouvez le tester avec l URL de localhost/test.php
 
 # :three: rd Step : Install Mysql
 
-A cette etape vous devez configurer le password de votre conteneur mysql
+A cette etape Vous devez configurer le mot de passe de votre conteneur mysql
 
 ```
 $ sudo apt install mysql-server
 ```
 ![Alt tag](sql.png)
 
-Acceder a votre conteneur
+Accédez à votre conteneur
 
 ```
 $ mysql -u root -p
@@ -113,9 +110,14 @@ mysql> CREATE DATABASE wiki;
 mysql> SHOW DATABASES;
 mysql> exit
 ```
+:arrow_right: NOTE Si votre machine ne vous donne pas le droit de configurer le mot de passe dont vous avez besoin pour exécuter cette commande afin de configurer manuellement:
+```
+$ sudo mysql_secure_installation
+```
+
 # :four: rd Step : Installer et configurer MediaWiki
 
-Premierment, il faut telecharger le pqauet de MediaWiki que tu peux le faire avec ce siteweb (www.mediawiki.org/wiki/Download) ou bien avec  la commande suivante :
+Premièrement, il faut telecharger le paquet de MediaWiki que vous peuez le faire avec ce siteweb (www.mediawiki.org/wiki/Download) ou bien avec  la commande suivante :
 ```
 $ wget https://releases.wikimedia.org/mediawiki/1.30/\
 mediawiki-1.30.0.tar.gz
@@ -134,11 +136,11 @@ $ ls
 mediawiki-1.30.0 mediawiki-1.30.0.tar.gz
 $ sudo cp -r mediawiki-1.30.0/* /var/www/html/
 ```
-:tada: Congratulation Vous ete presque finis !! 
+:tada: Congratulation vous êtes presque fini!! 
 
 Mais C'est quoi ca ?
 
-Et voila, Il faut ecrire dans votre navigateur 10.13.237.X/index.php
+Et voilà, Il faut ecrire dans votre navigateur ```10.13.237.X/index.php```
 qui va vous montrer cette page :
 
 ![Alt tag](wiki1.png)
@@ -159,7 +161,7 @@ UTF-8 strings handling for PHP
 php7.0-mbstring/xenial-updates 7.0.18-0ubuntu0.16.04.1 amd64
 MBSTRING module for PHP
 ```
-et Apres
+et après
 ```
 $ sudo apt install php7.0-mbstring php7.0-xml
 $ sudo systemctl restart apache2
@@ -171,7 +173,7 @@ $ sudo systemctl restart apache2
 
 
 ## Connecter MediaWiki à la base de données :
-C'est tres Simple Il faut juste que tu follow les instructions 
+Ç'est très Simple Il faut juste que vous suivez les instructions 
 
 ![Alt tag](wiki3.png)
 
@@ -179,3 +181,12 @@ C'est tres Simple Il faut juste que tu follow les instructions
 
 ![Alt tag](wiki5.png)
 
+Quand vous telechargez le fichier qui s'appelle LocalSetting.php vous devez le copier dans votre machine (dans ce cas vous devez faire les commande suivantes dans votre PC)
+```
+$ scp LocalSettings.php safaa@10.13.237.X:/home/safaa/
+```
+et après avoir fait cette commande sur votre serveur:
+```
+$ sudo cp /home/safaa/LocalSettings.php /var/www/html/
+```
+Donc, nous avons fini d’installer notre wiki et le résultat devrait être comme ça:
