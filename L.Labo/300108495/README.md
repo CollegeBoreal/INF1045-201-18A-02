@@ -190,3 +190,4 @@ et après avoir fait cette commande sur votre serveur:
 $ sudo cp /home/safaa/LocalSettings.php /var/www/html/
 ```
 Donc, nous avons fini d’installer notre wiki et le résultat devrait être comme ça:
+![Alt tag](fin.png)
