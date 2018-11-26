@@ -60,3 +60,87 @@ Configurer l'environnement de samba par le fichier /etc/samba/smb.conf et demarr
 Corrigez les erreurs éventuelles de configuration.
 ## ✨étape II - Déclarer les ressources partagées
 Cette opération est réalisée dans la partie Share Definitions du fichier smb.conf. Chaque fois que vous ajoutez ou modifiez une ressource, relancez le service serveur.
+Fichier de configuration d'un serveur SAMBA :
+
+## 📍Exemple de fichier de configuration de Samba (pour un serveur simple) :
+Vous trouverez de nombreuses autres options dans la documentation.
+
+# Fichier de configuration d'un serveur SAMBA :
+ntation.
+
+===============================================================================
+[global]
+
+## Browsing/Identification ###
+
+   workgroup = workgroup  //à remplacer par le nom de votre groupe de travail
+   netbios name = NomDuServeur  //à remplacer par le nom du serveur Samba
+   server string = %h server (Samba %v)
+;   wins support = no
+Exemple de fichier de configuration de Samba (pour un serveur simple) :
+Vous trouverez de nombreuses autres options dans la docume
+;   wins server = w.x.y.z
+   dns proxy = no
+;   name resolve order = lmhosts host wins bcast
+
+
+#### Debugging/Accounting ####
+   log file = /var/log/samba/log.%m
+
+# Put a capping on the size of the log files (in Kb).
+   max log size = 1000
+   syslog = 0
+
+# Do something sensible when Samba crashes: mail the admin a backtrace
+   panic action = /usr/share/samba/panic-action %d
+
+####### Authentication #######
+   security = user  //nécessite une authentification pour accéder aux ressources
+
+  encrypt passwords = true  
+  passdb backend = tdbsam guest
+
+   obey pam restrictions = yes
+   invalid users = root
+   passwd program = /usr/bin/passwd %u
+   passwd chat = *Enter\snew\sUNIX\spassword:* %n\n *Retype\snew\sUNIX\spassword:* %n\n .
+   socket options = TCP_NODELAY
+
+#===================== Share Definitions =======================
+
+[homes]
+
+#permet de partager le répertoire personnel de chaque utilisateur
+   comment = Home Directories
+   browseable = no
+   writable = yes
+   create mask = 0755
+   directory mask = 0755
+
+[partage]
+   comment = Ressource partagée
+#le répertoire /home/partage doit exister dans l'arborescence linux
+   path=/home/partage
+   browseable = yes
+   writable = yes
+   create mask = 0777
+   directory mask = 0777
+
+[printers]
+   comment = All Printers
+   browseable = no
+   path = /tmp
+   printable = yes
+   public = no
+   writable = no
+   create mode = 0700
+
+# Windows clients look for this share name as a source of downloadable
+# printer drivers
+[print$]
+   comment = Printer Drivers
+   path = /var/lib/samba/printers
+   browseable = yes
+   read only = yes
+   guest ok = no
+===============================================================================
