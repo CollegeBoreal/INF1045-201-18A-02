@@ -62,85 +62,41 @@ Corrigez les erreurs éventuelles de configuration.
 Cette opération est réalisée dans la partie Share Definitions du fichier smb.conf. Chaque fois que vous ajoutez ou modifiez une ressource, relancez le service serveur.
 Fichier de configuration d'un serveur SAMBA :
 
-## 📍Exemple de fichier de configuration de Samba (pour un serveur simple) :
-Vous trouverez de nombreuses autres options dans la documentation.
+## 🔎CRÉATION D'UTILISATEUR SAMBA 
+Rappel: les comptes doivent déjà être créés sous linux avec la commande adduser .
 
-# Fichier de configuration d'un serveur SAMBA :
-ntation.
+Pour créer les comptes Samba, il faut utiliser la commande:
+smbpasswd -a MonCompte MonMotdePasse
+Cette commande ajoute le compte SAMBA MonCompte avec le mot de passe MonMotDePasse.
 
-===============================================================================
-[global]
-
-## Browsing/Identification ###
-
-   workgroup = workgroup  //à remplacer par le nom de votre groupe de travail
-   netbios name = NomDuServeur  //à remplacer par le nom du serveur Samba
-   server string = %h server (Samba %v)
-;   wins support = no
-Exemple de fichier de configuration de Samba (pour un serveur simple) :
-Vous trouverez de nombreuses autres options dans la docume
-;   wins server = w.x.y.z
-   dns proxy = no
-;   name resolve order = lmhosts host wins bcast
+Il est possible ensuite dans la section "Share définitions" d'ajouter des partages accessibles seulement à certains utilisateurs par exemple pour le répertoire /home/administration :
 
 
-#### Debugging/Accounting ####
-   log file = /var/log/samba/log.%m
+[administration]
 
-# Put a capping on the size of the log files (in Kb).
-   max log size = 1000
-   syslog = 0
+path=/home/administration
+public = no
+valid users = pierre  @admin
+writable = yes
+create mask = 0770
+Le paramètre @admin permet de donner des droits aux membres du groupe système admin.
 
-# Do something sensible when Samba crashes: mail the admin a backtrace
-   panic action = /usr/share/samba/panic-action %d
+Le répertoire /home/administration doit être créé sous linux avec les droits adéquats , par exemple:
 
-####### Authentication #######
-   security = user  //nécessite une authentification pour accéder aux ressources
+mkdir /home/administration
+        chown pierre:admin /home/administration
+        chmod 770 /home/administration
+Un problème à éviter:
 
-  encrypt passwords = true  
-  passdb backend = tdbsam guest
+Le compte utilisateur SAMBA dispose de moins de privilèges que le compte root. Si vous partagez un répertoire et que vous faites les manipulations sous le compte root, faites attention aux droits, car si root est propriétaire (chmod 700), le client SAMBA ne pourra pas accéder au disque.Les droits SAMBA ne peuvent pas outrepasse les droits Linux, cf exemple ci-dessus pour donner des droits.
 
-   obey pam restrictions = yes
-   invalid users = root
-   passwd program = /usr/bin/passwd %u
-   passwd chat = *Enter\snew\sUNIX\spassword:* %n\n *Retype\snew\sUNIX\spassword:* %n\n .
-   socket options = TCP_NODELAY
+Voir man smbpasswd ou smbpasswd --help pour le mode d'utilisation de la commande.
 
-#===================== Share Definitions =======================
+Remarques :
 
-[homes]
+Les manipulations peuvent paraître fastidieuses si vous avez un grand nombre de comptes utilisateurs à créer.
 
-#permet de partager le répertoire personnel de chaque utilisateur
-   comment = Home Directories
-   browseable = no
-   writable = yes
-   create mask = 0755
-   directory mask = 0755
+Si vous disposez de nombreux comptes d'utilisateurs sur votre système Linux, il est possible de créer sans difficulté un script qui, a partir d'un fichier texte crée les comptes systèmes et les comptes SAMBA (voir à la fin du TP Samba).
 
-[partage]
-   comment = Ressource partagée
-#le répertoire /home/partage doit exister dans l'arborescence linux
-   path=/home/partage
-   browseable = yes
-   writable = yes
-   create mask = 0777
-   directory mask = 0777
+Toutes les indications sont dans la documentation de SAMBA.
 
-[printers]
-   comment = All Printers
-   browseable = no
-   path = /tmp
-   printable = yes
-   public = no
-   writable = no
-   create mode = 0700
-
-# Windows clients look for this share name as a source of downloadable
-# printer drivers
-[print$]
-   comment = Printer Drivers
-   path = /var/lib/samba/printers
-   browseable = yes
-   read only = yes
-   guest ok = no
-===============================================================================
