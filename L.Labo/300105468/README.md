@@ -1,4 +1,4 @@
-## ♦SAMBA SERVER
+## 🔎SAMBA SERVER
 
 ## 📍INTRODUCTION
 Avec SAMBA vous allez mettre en place un service de partage de disque pour des clients réseau. Ceux-ci peuvent être sous Linux ou sous Windows. Nous verrons surtout la configuration du service serveur sous Linux, et la configuration des clients sous Windows.
