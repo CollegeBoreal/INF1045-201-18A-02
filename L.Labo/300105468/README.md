@@ -24,3 +24,20 @@ Le paquet installe principalement samba et samba-common :
 
 La commande dpkg-reconfigure samba vous demande si samba doit être lancé en mode autonome, choisissez « oui », si un fichier /etc/samba/smbpasswd doit être créé, choisissez également « oui ». La dernière option vous permet d'avoir une base de données de compte créée automatiquement à partir de la base de compte du fichier /etc/passwd.
 Faites tout de suite une sauvegarde du fichier /etc/smb.conf.
+
+## Le fichier de configuration sous Linux
+Voici le fichier de configuration qui nous servira de base de travail. Il va permettre de :
+
+définir NomDuServeur comme serveur Samba,
+
+mettre en place l'authentification des utilisateurs,
+
+partager des disques et une imprimante pour un client Windows,
+
+partager le dossier personnel d'un utilisateur sous Linux comme étant son répertoire personnel sous Windows.
+
+Le fichier de configuration comprend essentiellement deux parties :
+
+* une partie “ générale ” qui définit le comportement général du serveur et la stratégie adoptée pour les services communs (CPD, mode d'authentification, service WINS)...
+
+* une partie share, qui définit les ressources partagées et les permissions d'accès.
