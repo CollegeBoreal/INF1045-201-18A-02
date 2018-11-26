@@ -54,3 +54,7 @@ Le fichier de configuration comprend essentiellement deux parties :
 * une partie “ générale ” qui définit le comportement général du serveur et la stratégie adoptée pour les services communs (CPD, mode d'authentification, service WINS)...
 
 * une partie share, qui définit les ressources partagées et les permissions d'accès.
+ ## 📍étape I - Configuration du fichier smb.conf
+Configurer l'environnement de samba par le fichier /etc/samba/smb.conf et demarrez le service avec la commande /etc/init.d/samba start ou restart. Cette opération doit être réalisée chaque fois que le fichier de configuration est modifié. Vérifiez la configuration à l'aide de la commande testparm | more.
+
+Corrigez les erreurs éventuelles de configuration.
