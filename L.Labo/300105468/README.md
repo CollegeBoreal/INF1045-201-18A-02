@@ -66,5 +66,5 @@ Fichier de configuration d'un serveur SAMBA :
 Rappel: les comptes doivent déjà être créés sous linux avec la commande adduser .
 
 Pour créer les comptes Samba, il faut utiliser la commande:
-smbpasswd -a MonCompte MonMotdePasse
+```smbpasswd -a MonCompte MonMotdePasse```
 
