@@ -30,7 +30,20 @@ Voici le fichier de configuration qui nous servira de base de travail. Il va per
 
 définir NomDuServeur comme serveur Samba,
 
-mettre en place l'authentification des utilisateurs,
+mettre en place l'authentification des utilisateurs.
+
+## Les étapes de la configuration du serveur
+Nous allons réaliser les opérations suivantes :
+
+* Vérifier et valider le fichier de configuration,
+
+* Déclarer les ressources partagées,
+
+* Créer des comptes utilisateurs pour SAMBA.
+
+Il n'y aura plus qu'à tester la configuration à partir d'un client.
+
+Attention, un compte système n'est pas un compte SAMBA. Faites bien la distinction entre les deux.
 
 partager des disques et une imprimante pour un client Windows,
 
