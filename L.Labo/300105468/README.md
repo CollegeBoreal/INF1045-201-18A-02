@@ -1,11 +1,11 @@
-## SAMBA SERVER
+## ♦SAMBA SERVER
 
 ## 📍INTRODUCTION
 Avec SAMBA vous allez mettre en place un service de partage de disque pour des clients réseau. Ceux-ci peuvent être sous Linux ou sous Windows. Nous verrons surtout la configuration du service serveur sous Linux, et la configuration des clients sous Windows.
 
 Samba est un produit assez populaire. Il existe de plus en plus d'outils de configuration en environnement graphique qui simplifient les tâches sur un serveur en exploitation (partage de ressources, création de comptes utilisateurs). Comme nous n'en sommes pas là, nous allons réaliser les opérations manuellement.
 
-## Eléments d'installation et de configuration de SAMBA
+## 📍Eléments d'installation et de configuration de SAMBA
 SAMBA est installé avec le paquet fds-network sur Kubuntu Dapper. Si vous n'utilisez pas le paquet fds-network, installez les paquets manuellement. Il ne devrait normalement pas y avoir de problèmes de dépendances.
 
 Le paquet installe principalement samba et samba-common :
@@ -25,14 +25,14 @@ Le paquet installe principalement samba et samba-common :
 La commande dpkg-reconfigure samba vous demande si samba doit être lancé en mode autonome, choisissez « oui », si un fichier /etc/samba/smbpasswd doit être créé, choisissez également « oui ». La dernière option vous permet d'avoir une base de données de compte créée automatiquement à partir de la base de compte du fichier /etc/passwd.
 Faites tout de suite une sauvegarde du fichier /etc/smb.conf.
 
-## Le fichier de configuration sous Linux
+## 📍Le fichier de configuration sous Linux
 Voici le fichier de configuration qui nous servira de base de travail. Il va permettre de :
 
 définir NomDuServeur comme serveur Samba,
 
 mettre en place l'authentification des utilisateurs.
 
-## Les étapes de la configuration du serveur
+## 📍Les étapes de la configuration du serveur
 Nous allons réaliser les opérations suivantes :
 
 * Vérifier et valider le fichier de configuration,
