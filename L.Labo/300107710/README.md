@@ -54,6 +54,7 @@ $ firewall-cmd --list-services
 ssh dhcpv6-client http https
 
 3. UNCOMPLICATEDFIREWALL (UFW).
+
 Let’s see how you can similarly control SSH access on an Ubuntu machine using ufw. The ufw program might not come installed on new Ubuntu installations and, in any case, will be disabled by default, so you’ll want to get it running:
 ````
 $ apt install ufw
