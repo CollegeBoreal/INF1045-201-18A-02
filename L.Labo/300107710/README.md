@@ -40,6 +40,7 @@ success
 $ firewall-cmd --reload
 success
 ````
+
 2.3 Verifier les services ajoutés dans le firewall
 ````
 $ firewall-cmd --list-services
