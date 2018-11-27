@@ -1,5 +1,5 @@
 
-Securing your web server
+Securing your web server(Linux Ubuntu)
 
 1.	SCANNING FOR OPEN PORTS
 Vérification des ports ouverts
@@ -8,6 +8,15 @@ $ netstat -npl
 ````
 
 2.	FIREWALL.
+2.1 Installation du Firewall.
+Avant d'installer le Firewall il faut vérifier s'il est déjà installer dans votre Serveur, Sinon il faut l'installer.
+Pour ce faire il faut mettre à jour votre système:
+````
+$ apt update
+$ apt upgrade
+
+$ apt install firewalld
+````
 2.1  Vérifier l’ état du firewall de votre serveur.
 ````
 $ sudo firewall-cmd --state 
