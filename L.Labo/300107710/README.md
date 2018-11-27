@@ -1,14 +1,14 @@
 
 Securing your web server(Linux Ubuntu)
 
-1.	SCANNING FOR OPEN PORTS
+1.	SCANNING FOR OPEN PORTS                                                                                                             
 Vérification des ports ouverts
 ````
 $ netstat -npl
 ````
 
-2.	FIREWALL.
-2.1 Installation du Firewall.
+2.	FIREWALL.                                                                                                                          
+2.1. Installation du Firewall.
 Avant d'installer le Firewall il faut vérifier s'il est déjà installer dans votre Serveur, Sinon il faut l'installer.
 Pour ce faire il faut mettre à jour votre système:
 ````
@@ -17,18 +17,18 @@ $ apt upgrade
 
 $ apt install firewalld
 ````
-2.2  Vérifier l’ état du firewall de votre serveur.
+2.2.  Vérifier l’ état du firewall de votre serveur.
 ````
 $ sudo firewall-cmd --state 
 ````
 Running
 By default, firewalld will be active and will reject all incoming traffic with a couple of exceptions, like SSH. 
-2.3 Liste des services autorisés par le Firewall.
+2.3. Liste des services autorisés par le Firewall.
 ````
 $ sudo firewall-cmd --list-services
 ````
-ssh dhcpv6-client
-2.4 Ajouter d'autres services.   
+ssh dhcpv6-client                                                                                                                        
+2.4. Ajouter d'autres services.   
 Pour ajouter le service http et https, pour se faire il faut avoir les privilège de l’administrateur. Cette fois aussi il faut se connecter en tant que root.
 ````
 $ sudo -i
@@ -47,11 +47,12 @@ $ firewall-cmd --permanent --add-service=https
 $ firewall-cmd --reload
 ````
 
-2.5 Verifier les services ajoutés dans le firewall.
+2.5. Verifier les services ajoutés dans le firewall.                                                                              
 ````
 $ firewall-cmd --list-services
 ````
-ssh dhcpv6-client http https
+ssh dhcpv6-client http https                                                                                                             
+
 
 3. UNCOMPLICATEDFIREWALL (UFW).
 
@@ -72,7 +73,7 @@ $ sudo ufw status
 
 Status: active
 
-4. Test de sécurité.                                                                                                                   
+4. Test de sécurité.                                                                                                                                              
 Pour tester notre Firewall on va ajouter une régle complexe appelée --add-rich-rule qui permettera d'accepter le trafic TCP sur le port 22(SSH) prevenant uniquement du hoste Lab5 utilisant l'adresse IP 10.13.237.5
 ````
 $ firewall-cmd --add-rich-rule='rule family="ipv4" \ source address="10.13.237.5" port protocol="tcp" port="22" accept' 
