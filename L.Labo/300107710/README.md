@@ -59,7 +59,7 @@ Let’s see how you can similarly control SSH access on an Ubuntu machine using 
 ````
 $ apt install ufw
 ````
-Because ufw starts with all ports closed, enabling it prevents you from opening a new SSH session. Any existing sessions shouldn’t be affected but, still, it’s probably a good idea to add a rule allowing SSH even before enabling ufw:
+Because ufw starts with all ports closed, enabling it prevents you from opening a new SSH session. Any existing sessions shouldn’t be affected but, still, it’s probably a good idea to add a rule allowing SSH even before enabling ufw.
 ````
 $ ufw allow ssh 
 ````
