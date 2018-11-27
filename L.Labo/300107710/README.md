@@ -72,7 +72,7 @@ $ sudo ufw status
 
 Status: active
 
-4. Test de sécurité.
+4. Test de sécurité.                                                                                                                   
 Pour tester notre Firewall on va ajouter une régle complexe appelée --add-rich-rule qui permettera d'accepter le trafic TCP sur le port 22(SSH) prevenant uniquement du hoste Lab5 utilisant l'adresse IP 10.13.237.5
 ````
 $ firewall-cmd --add-rich-rule='rule family="ipv4" \ source address="10.13.237.5" port protocol="tcp" port="22" accept' 
