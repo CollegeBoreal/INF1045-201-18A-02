@@ -80,13 +80,29 @@ writable = yes
 create mask = 0770
  ```
  Le paramètre @admin permet de donner des droits aux membres du groupe système admin.
-
+ 
 Le répertoire /home/administration doit être créé sous linux avec les droits adéquats , par exemple:
 
-``` mkdir /home/administration
-        chown pierre:admin /home/administration
-        chmod 770 /home/administration    ```
-     
+ ```mkdir /home/administration
+chown pierre:admin /home/administration
+chmod 770 /home/administration
+```
+# Un problème à éviter:
 
+Le compte utilisateur SAMBA dispose de moins de privilèges que le compte root. Si vous partagez un répertoire et que vous faites les manipulations sous le compte root, faites attention aux droits, car si root est propriétaire (chmod 700), le client SAMBA ne pourra pas accéder au disque.Les droits SAMBA ne peuvent pas outrepasse les droits Linux, cf exemple ci-dessus pour donner des droits.
 
+Voir man smbpasswd ou smbpasswd --help pour le mode d'utilisation de la commande.
+
+Remarques :
+
+* Les manipulations peuvent paraître fastidieuses si vous avez un grand nombre de comptes utilisateurs à créer.
+
+* Si vous disposez de nombreux comptes d'utilisateurs sur votre système Linux, il est possible de créer sans difficulté un script qui, a partir d'un fichier texte crée les comptes systèmes et les comptes SAMBA (voir à la fin du TP Samba).
+
+Accès depuis un poste client Linux
+Il est possible d'y accéder graphiquement avec le navigateur konqueror et le protocole smb en utilisant l'url suivante : smb://@ip-du-serveur/nom-partage ou smb://@ip-du-serveur/
+http://www.linux-france.org/prj/edu/archinet/systeme/images/smb_linux1.png
+Figure 25.1. Accès à un serveur SAMBA à partir d'un client Linux par méthode graphique.
+
+Accès à un serveur SAMBA à partir d'un client Linux par méthode graphique.
 
