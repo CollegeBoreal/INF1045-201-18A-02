@@ -1,4 +1,5 @@
 
-1-Installer NEXTCLOUD 
+1-Installer Appache 2
 
-``` Installer appache ```
+``` $ sudo apt update
+$ sudo apt install apache2```
