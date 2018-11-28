@@ -7,5 +7,5 @@ C'est le serveur HTTP le plus utilise du Web.
 $ sudo apt update
 $ sudo apt install apache2
 ```
-
-Utiliser comme URL localhost. Si vous etes sur Virtual Box VM, c est l’adresse IP de la machine.
+Bon a savoir:
+il faut Utiliser comme URL localhost. Si vous etes sur Virtual Box VM, c est l’adresse IP de la machine.
