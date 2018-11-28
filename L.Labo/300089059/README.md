@@ -5,10 +5,31 @@ Vous pouvez l’installer sur un server, ou sur une machine virtuelle (VM).
 Pre-requis
 
 Ubuntu 16.04/18.04 LTS (recommended)
+
 MySQL or MariaDB 5.5+ (recommended)
+
 Apache 2.4 with mod_php or php-fpm (recommended)
+
 PHP. 
+
 https://docs.nextcloud.com/server/14/admin_manual/installation/system_requirements.html
+
+
+
+Steps:
+Voici une liste de ce que vous devez faire pour atteindre votre objectif:
+
+ Installez Apache
+
+ Installez le langage PHP.
+
+ Installez un moteur SQL (mysql ou MDB)
+
+ Installez NEXTCLOUD 
+
+
+
+
 
 
 
