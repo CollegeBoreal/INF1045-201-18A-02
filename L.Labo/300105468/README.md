@@ -73,11 +73,33 @@ Cette commande ajoute le compte SAMBA MonCompte avec le mot de passe MonMotDePas
 Il est possible ensuite dans la section "Share définitions" d'ajouter des partages accessibles seulement à certains utilisateurs par exemple pour le répertoire /home/administration :
 
 ``` [administration]
-#mkdir -p /samba/sharehome
-#touch /samba/sharehome/myfile
-#chmod 777 /samba/sharehome
+path=/home/administration
+public = no
+valid users = pierre  @admin
+writable = yes
+create mask = 0770
  ```
+ Le paramètre @admin permet de donner des droits aux membres du groupe système admin.
 
+Le répertoire /home/administration doit être créé sous linux avec les droits adéquats , par exemple:
+
+``` mkdir /home/administration
+        chown pierre:admin /home/administration
+        chmod 770 /home/administration 
+        ```
+        ## Un problème à éviter:
+
+Le compte utilisateur SAMBA dispose de moins de privilèges que le compte root. Si vous partagez un répertoire et que vous faites les manipulations sous le compte root, faites attention aux droits, car si root est propriétaire (chmod 700), le client SAMBA ne pourra pas accéder au disque.Les droits SAMBA ne peuvent pas outrepasse les droits Linux, cf exemple ci-dessus pour donner des droits.
+
+Voir man smbpasswd ou smbpasswd --help pour le mode d'utilisation de la commande.
+
+Remarques :
+
+Les manipulations peuvent paraître fastidieuses si vous avez un grand nombre de comptes utilisateurs à créer.
+
+Si vous disposez de nombreux comptes d'utilisateurs sur votre système Linux, il est possible de créer sans difficulté un script qui, a partir d'un fichier texte crée les comptes systèmes et les comptes SAMBA (voir à la fin du TP Samba).
+
+Toutes les indications sont dans la documentation de SAMBA.
 
 
 
