@@ -73,12 +73,10 @@ Cette commande ajoute le compte SAMBA MonCompte avec le mot de passe MonMotDePas
 Il est possible ensuite dans la section "Share définitions" d'ajouter des partages accessibles seulement à certains utilisateurs par exemple pour le répertoire /home/administration :
 
 ``` [administration]
-
-path=/home/administration
-public = no
-valid users = pierre  @admin
-writable = yes
-create mask = 0770  ```
+#mkdir -p /samba/sharehome
+#touch /samba/sharehome/myfile
+#chmod 777 /samba/sharehome
+ ```
 
 
 
