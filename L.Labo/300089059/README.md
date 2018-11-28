@@ -1,4 +1,17 @@
 
+Il existe plusieurs maniere de partager des fichiers sur le net. Les plus connus sont DropBox ou encore Google Drive.Contraite c est que c est limiter et pas "SUR".NEXTCLOUD est une des solutions open source, et surtout "SUR". 
+Vous pouvez l’installer sur un server, ou sur une machine virtuelle (VM).
+
+Pre-requis
+
+Ubuntu 16.04/18.04 LTS (recommended)
+MySQL or MariaDB 5.5+ (recommended)
+Apache 2.4 with mod_php or php-fpm (recommended)
+PHP. 
+https://docs.nextcloud.com/server/14/admin_manual/installation/system_requirements.html
+
+
+
 1-Installer Appache 2.0(version)
 
 C'est le serveur HTTP le plus utilise du Web.
