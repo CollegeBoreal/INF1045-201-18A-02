@@ -1,5 +1,6 @@
 
-1-Installer Appache II
+1-Installer Appache 2.0(version)
+C'est le serveur HTTP le plus utilise du Web.
 
 ``` 
 $ sudo apt update
