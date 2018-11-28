@@ -41,6 +41,12 @@ $ sudo apt install apache2
 Bon a savoir:
 il faut Utiliser comme URL localhost. Si vous etes sur Virtual Box VM, c est l’adresse IP de la machine.
 
+2-Installer PHP
+
+```$ sudo apt install php
+$ sudo apt install libapache2-mod-php```
+
+
 
 
 
