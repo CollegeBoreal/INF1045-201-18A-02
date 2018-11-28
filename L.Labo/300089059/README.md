@@ -14,10 +14,7 @@ PHP.
 
 https://docs.nextcloud.com/server/14/admin_manual/installation/system_requirements.html
 
-
-
-Steps:
-Voici une liste de ce que vous devez faire pour atteindre votre objectif:
+etapes:
 
  Installez Apache
 
