@@ -99,10 +99,4 @@ Remarques :
 
 * Si vous disposez de nombreux comptes d'utilisateurs sur votre système Linux, il est possible de créer sans difficulté un script qui, a partir d'un fichier texte crée les comptes systèmes et les comptes SAMBA (voir à la fin du TP Samba).
 
-Accès depuis un poste client Linux
-Il est possible d'y accéder graphiquement avec le navigateur konqueror et le protocole smb en utilisant l'url suivante : smb://@ip-du-serveur/nom-partage ou smb://@ip-du-serveur/
-http://www.linux-france.org/prj/edu/archinet/systeme/images/smb_linux1.png
-Figure 25.1. Accès à un serveur SAMBA à partir d'un client Linux par méthode graphique.
-
-Accès à un serveur SAMBA à partir d'un client Linux par méthode graphique.
 
