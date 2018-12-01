@@ -46,9 +46,15 @@ il faut Utiliser comme URL localhost. Si vous etes sur Virtual Box VM, c est lâ€
 ``` $ sudo apt install php
 
     $ sudo apt install libapache2-mod-php
+    
+    $ sudo /etc/init.d/apache2 restart
 ```
+3-Installation de MYSQL
 
+```  sudo apt install mysql-server
 
+     sudo mysql_secure_installation
+```
 
 
 
