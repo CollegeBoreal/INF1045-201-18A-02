@@ -28,7 +28,7 @@ etapes:
 
  Installez un moteur SQL (mysql ou MDB)
 
- Installez NEXTCLOUD 
+ Telechargez NEXTCLOUD 
 
 
 
@@ -71,4 +71,7 @@ ensuite repondez au question en suivant ce guide ci-dessous.
     redemarer
     ``` sudo systemctl restart mysql.service ```
 
+```$ wget https://download.nextcloud.com/server/releases/nextcloud-12.0.0.tar bz2```
+
+``` 10.12.237.12 nexcloud```
 
