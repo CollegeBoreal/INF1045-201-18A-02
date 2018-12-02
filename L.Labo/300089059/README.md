@@ -67,5 +67,8 @@ ensuite repondez au question en suivant ce guide ci-dessous.
     Disallow root login remotely? [Y/n]: Y
     Remove test database and access to it? [Y/n]:  Y
     Reload privilege tables now? [Y/n]:  Y
+    
+    redemarer
+    ``` sudo systemctl restart mysql.service ```
 
 
