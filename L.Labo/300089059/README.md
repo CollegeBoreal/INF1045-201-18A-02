@@ -1,12 +1,12 @@
 
 
 Il existe plusieurs maniere de partager des fichiers sur le net. Les plus connus sont DropBox ou encore Google Drive.La contraite c est que la quatiter de stockage est limiter et pas "SUR".NEXTCLOUD est une solutions qui est open source, et surtout "SUR". 
-Vous pouvez l’installer sur un server, ou sur une machine virtuelle (VM).
+Vous pouvez l’installer sur un server, ou sur une machine virtuelle (VM).😍
 
 Installation de NEXTCLOUD
 
-Il y a deux maniere possible:
-Rapide avec SNAP et manuelle(ici presente)
+Il y a deux maniere possible:🤦‍♂️
+Rapide avec SNAP et manuelle(ici presente)👌
 
 Pre-requis
 
@@ -22,15 +22,13 @@ https://docs.nextcloud.com/server/14/admin_manual/installation/system_requiremen
 
 etapes:
 
- Installez Apache
+ 👍Installez Apache
 
- Installez le langage PHP.
+ 👍Installez le langage PHP.
 
- Installez un moteur SQL (mysql ou MDB)
+ 👍Installez un moteur SQL (mysql ou MDB)
 
- Telechargez NEXTCLOUD 
-
-
+ 👍Telechargez NEXTCLOUD 
 
 1-Installer Appache 2.0(version)
 
@@ -41,7 +39,7 @@ $ sudo apt update
 $ sudo apt install apache2
 ```
 Bon a savoir:
-il faut Utiliser comme URL localhost. Si vous etes sur Virtual Box VM, c est l’adresse IP de la machine.
+il faut Utiliser comme URL localhost. Si vous etes sur Virtual Box VM sa sera l’adresse IP de la machine.
 
 2-Installer PHP
 
@@ -70,8 +68,12 @@ ensuite repondez au question en suivant ce guide ci-dessous.
     
     redemarer
     ``` sudo systemctl restart mysql.service ```
-
+    
+    
+Sur le site de Nextcloud telecharger la derniere version gratuite
 ```$ wget https://download.nextcloud.com/server/releases/nextcloud-12.0.0.tar bz2```
 
+Enfin ouvrer une page index
 ``` 10.12.237.12 nexcloud```
+Voila maintenant vous pouvez vous inscrire sur nextcloud et l utiliser
 
