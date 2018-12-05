@@ -67,17 +67,14 @@ Rappel: les comptes doivent déjà être créés sous linux avec la commande add
 
 Pour créer les comptes Samba, il faut utiliser la commande:
 
-```smbpasswd -a MonCompte MonMotdePasse```
+  # adduser sambauer
+  # smbpasswd -a sambauser
+       
 Cette commande ajoute le compte SAMBA MonCompte avec le mot de passe MonMotDePasse.
 
 Il est possible ensuite dans la section "Share définitions" d'ajouter des partages accessibles seulement à certains utilisateurs par exemple pour le répertoire /home/administration :
 
-``` [administration]
-path=/home/administration
-public = no
-valid users = pierre  @admin
-writable = yes
-create mask = 0770
+``` # mkdir -p /samba/
  ```
  Le paramètre @admin permet de donner des droits aux membres du groupe système admin.
  
@@ -98,5 +95,9 @@ Remarques :
 * Les manipulations peuvent paraître fastidieuses si vous avez un grand nombre de comptes utilisateurs à créer.
 
 * Si vous disposez de nombreux comptes d'utilisateurs sur votre système Linux, il est possible de créer sans difficulté un script qui, a partir d'un fichier texte crée les comptes systèmes et les comptes SAMBA (voir à la fin du TP Samba).
+
+
+ 
+
 
 
