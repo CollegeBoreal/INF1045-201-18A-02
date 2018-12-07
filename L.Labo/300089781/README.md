@@ -5,7 +5,7 @@ Le VPN (Virtual Private Network) sert à pouvoir accéder à Internet en toute s
 :small_red_triangle: Avoir au moins deux machines génériques (containers) à votre disposition. Un pour jouer le rôle du serveur (pour moi par exemple, az-cb-prod) et une pour jouer le rôle du client (cb-dev). 
 :small_red_triangle: je vous suggère d'ouvrir plusieurs fenêtre terminal (au moins 3) pour pouvoir se connecter avec deux d'entres elles sur les deux machines en question (az-cb-prod & cb-dev) et puis l'autre fenêtre servira à faire les commandes qui suivent.
 
-:triangular_flag_on_post: Petite parenthèse: Tout au long de mon projet, je devais changer de prompt pour donner la permission à certaines de mes commandes de pouvoir s'exécuter. C'est donc avec le ```sudo``` que je peux faire cela: prompt #.
+:triangular_flag_on_post: Petite parenthèse: Tout au long de mon projet, je devais changer de prompt pour donner la permission à certaines de mes commandes de pouvoir s'exécuter. C'est donc avec le ```sudo -i``` que je peux faire cela (prompt #).
 
 ## Commençons !
 :one: SSH. Activez le serveur et le client en utilisant la commande SSH. Par exemple, voici la commande que j'ai fais pour partir mon serveur (az-cb-prod) et mon client (cb-dev) sur deux terminaux différents:
