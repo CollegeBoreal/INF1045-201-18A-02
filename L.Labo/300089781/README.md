@@ -3,7 +3,7 @@ Le VPN (Virtual Private Network) sert à pouvoir accéder à Internet en toute s
 
 ## Prérequis pour installer un VPN :warning:
 :small_red_triangle: Avoir au moins deux machines génériques (containers) à votre disposition. Un pour jouer le rôle du serveur (pour moi par exemple, az-cb-prod) et une pour jouer le rôle du client (cb-dev). 
-:small_red_triangle: je vous suggère d'ouvrir plusieurs fenêtre terminal (au moins 3) pour pouvoir se connecter avec deux d'entres elles sur les deux machines en question (az-cb-prod & cb-dev) et puis l'autre fenêtre servira à faire les commandes qui suivent.
+:small_red_triangle: Je vous suggère d'ouvrir plusieurs fenêtre terminal (au moins 3) pour pouvoir se connecter avec deux d'entres elles sur les deux machines en question (az-cb-prod & cb-dev) et puis l'autre fenêtre servira à faire les commandes qui suivent.
 
 :triangular_flag_on_post: Petite parenthèse: Tout au long de mon projet, je devais changer de prompt pour donner la permission à certaines de mes commandes de pouvoir s'exécuter. C'est donc avec le ```sudo -i``` que je peux faire cela (prompt #).
 
@@ -24,7 +24,7 @@ $ sudo apt-get install openvpn easy-rsa
 # ufw allow 22
 # ufw allow 1194
 ```
-:four: Toujours sur le serveur, il faut aller suprimer une ligne qui se trouve dans le fichier ```sysctl.conf```. Cela va permettre le routage interne entre les interfaces réseau sur le serveur. Pour commencer, il faut se mettre en mode "sudo", car sinon vous ne serait pas en mesure de pouvoir faire des changements dans la page et puis entrer dans /etc/ en fesant "cd".
+:four: Toujours sur le serveur, il faut aller suprimer une ligne qui se trouve dans le fichier ```sysctl.conf```. Cela va permettre le routage interne entre les interfaces réseau sur le serveur. Lorsque vous allez être dans le répertoir, il sera indiqué quelle ligne suprimer. Pour commencer, il faut se mettre en mode "root", car sinon vous ne serait pas en mesure de pouvoir faire des changements dans la page et puis entrer dans /etc/ en fesant "cd".
 ```
 # nano /etc/sysctl.conf
 ```
