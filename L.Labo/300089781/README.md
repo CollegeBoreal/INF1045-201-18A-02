@@ -187,6 +187,6 @@ $ ip addr
 ```
 $ curl 10.8.0.1:4200il
 ```
-Et voici le résultat final! Vous pouvez vous connecter à distance grâce au VPN! Il suffit d'écrire l'adresse IP de votre serveur (pour moi la az-cb-prod 104.211.2.218) dans le URL d'une page internet et puis voir le résultat final!
 ![Alt_tag](curl.png)
+Et voici le résultat final! Vous pouvez vous connecter à distance grâce au VPN! Il suffit d'écrire l'adresse IP de votre serveur (pour moi la az-cb-prod 104.211.2.218) dans le URL d'une page internet et puis voir le résultat final!
 ![Alt_tag](page.png)
