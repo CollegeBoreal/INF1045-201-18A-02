@@ -13,7 +13,7 @@ Il y a deux maniere possible:🤦‍♂️
 Rapide avec SNAP et manuelle(ici presente)👌
 
 Le SNAP est super car il rapide a installer et prend peut d espace en plus les mises a jour sont automatique.
-Un snap c est un ensemble compressé d'applications.Snap va unifier l installation des applications sur linux. Snap fonctionne sur toutes les distributions.
+Un snap c est un ensemble compressé d'applications.Snap va unifier l installation des applications sur linux. Enfin fonctionne sur toutes les distributions.
 
 Nous allons utiliser snap pour installer nextcloud.
 
