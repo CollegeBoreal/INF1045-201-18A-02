@@ -12,7 +12,7 @@ NextCloud supporte Windows, Mac, Linux, Android et iOS.Sa force reside dans le f
 Il y a deux maniere possible:🤦‍♂️
 Rapide avec SNAP et manuelle(ici presente)👌
 
-Le SNAP est super pour etre rapide a installer avec un peu d espace  et les mises a jour sont automatique.
+Le SNAP est super car il rapide a installer et prend peut d espace en plus les mises a jour sont automatique.
 Pre-requis
 
 Ubuntu 16.04/18.04 LTS (recommended)
