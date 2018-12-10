@@ -87,6 +87,17 @@ Il est possible ensuite dans la section "Share définitions" d'ajouter des parta
 ```
 ![Alt_tag](Cap1.png)
 
+## La Commande systemctl
+```
+# systemctl start smbd
+# systemctl enable smbd
+```
+## Tester la Configuration Samba
+```
+# testparm
+```
+![Alt_tag](Cap2.png)
+
 ## Un problème à éviter:
 
 Le compte utilisateur SAMBA dispose de moins de privilèges que le compte root. Si vous partagez un répertoire et que vous faites les manipulations sous le compte root, faites attention aux droits, car si root est propriétaire (chmod 777), le client SAMBA ne pourra pas accéder au disque.Les droits SAMBA ne peuvent pas outrepasse les droits Linux, cf exemple ci-dessus pour donner des droits.
