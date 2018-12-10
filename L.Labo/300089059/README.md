@@ -5,7 +5,7 @@ Chap 8=networked file sharing (NEXTCLOUD)
 Il existe plusieurs maniere de partager des fichiers sur le net. Les plus connus sont DropBox ou encore Google Drive.La contraite c est que la quantiter de stockage est limiter et pas "SUR".NEXTCLOUD est une solutions qui est open source(gratuit), et surtout "SUR". 
 Vous pouvez l’installer sur un server, ou sur une machine virtuelle (VM).😍
 
-NextCloud supporte Windows, Mac, Linux, Android et iOS.   
+NextCloud supporte Windows, Mac, Linux, Android et iOS.Sa force reside dans le fait que vous controlez completement vos donnees, l'emplacement du stockage etc... Tout est controler par vous.
 
 ## Installation de NEXTCLOUD
 
