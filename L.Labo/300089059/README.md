@@ -13,7 +13,19 @@ Il y a deux maniere possible:🤦‍♂️
 Rapide avec SNAP et manuelle(ici presente)👌
 
 Le SNAP est super car il rapide a installer et prend peut d espace en plus les mises a jour sont automatique.
-Pre-requis
+Un snap c est un ensemble compressé d'applications.Snap va unifier l installation des applications sur linux. Snap fonctionne sur toutes les distributions.
+
+Nous allons utiliser snap pour installer nextcloud.
+
+Apt update
+
+Apt upgrade
+
+Apt install snapd
+
+Snap install nextcloud et enfin localhost
+
+## Pre-requis
 
 Ubuntu 16.04/18.04 LTS (recommended)
 
