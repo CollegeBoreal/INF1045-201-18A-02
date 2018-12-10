@@ -127,7 +127,7 @@ verb 3
 ```
 ** Notez qu'un point-virgule (;) indique à OpenVPN de ne pas lire ni exécuter la ligne suivante.
 <br>
-:raised_hands: Pour terminer avec le client, il faut seulement faire la commande:
+Pour terminer avec le client, il faut seulement faire la commande:
 ```
 $ systemctl start openvpn
 ```
