@@ -91,8 +91,10 @@ ensuite repondez au question en suivant ce guide ci-dessous.
     
 Sur le site de Nextcloud telecharger la derniere version gratuite
 ```$ wget https://download.nextcloud.com/server/releases/nextcloud-12.0.0.tar.bz2```
+``` tar xjf nextcloud-12.0.0.tar.bz2```
+``` systemctl restart apache2```
 
 Enfin ouvrer une page index
-``` 10.12.237.12 nextcloud```
+``` 10.12.237.12 index.php```
 Voila maintenant vous pouvez vous inscrire sur nextcloud et l utiliser 😃😃😃😃😃😃😃😃😃 
 
