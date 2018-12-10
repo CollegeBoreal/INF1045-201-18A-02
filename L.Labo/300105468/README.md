@@ -147,6 +147,10 @@ root@genericVM:~#
 ```
 \\192.168.1.23\sharehome
 ```
+![Alt_tag](Cap3.png)
+ 
+ ## Puis
+ ![Alt_tag](Cap4.png)
  
 
 
