@@ -17,11 +17,13 @@ Un snap c est un ensemble compressé d'applications.Snap va unifier l installati
 
 Nous allons utiliser snap pour installer nextcloud.
 
-Apt update
+``` bash
+$ apt update
 
-Apt upgrade
+$ apt upgrade
 
-Apt install snapd
+$ apt install snapd 
+```
 
 Snap install nextcloud et enfin localhost
 
