@@ -94,5 +94,5 @@ Sur le site de Nextcloud telecharger la derniere version gratuite
 
 Enfin ouvrer une page index
 ``` 10.12.237.12 nexcloud```
-Voila maintenant vous pouvez vous inscrire sur nextcloud et l utiliser 😃😃😃😃😃😃😃😃😃
+Voila maintenant vous pouvez vous inscrire sur nextcloud et l utiliser 😃😃😃😃😃😃😃😃😃 
 
