@@ -1,5 +1,5 @@
 
-Chap 8=networked file sharing (NEXTCLOUD)
+## Chapt 8 = Networked file sharing (NEXTCLOUD)
 
 
 Il existe plusieurs maniere de partager des fichiers sur le net. Les plus connus sont DropBox ou encore Google Drive.La contraite c est que la quantiter de stockage est limiter et pas "SUR".NEXTCLOUD est une solutions qui est open source(gratuit), et surtout "SUR". 
