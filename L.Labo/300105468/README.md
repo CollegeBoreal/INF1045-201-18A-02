@@ -85,6 +85,13 @@ Il est possible ensuite dans la section "Share définitions" d'ajouter des parta
 ```
 # nano /etc/samba/smb.conf
 ```
+## Mettre en suite
+```
+ [sharehome]
+ path = /samba/sharehome
+ writable = yes
+```
+
 ![Alt_tag](Cap1.png)
 
 ## La Commande systemctl
