@@ -145,13 +145,17 @@ root@genericVM:~#
 ## Accessing a Samba server from windows
 
 ```
-\\192.168.1.23\sharehome
+\\10.13.237.14\sharehome
 ```
 ![Alt_tag](Cap3.png)
  
  ## Puis
  ![Alt_tag](Cap4.png)
  
+ 
+### Et Voilà
+  ![Alt_tag](Cap5.png)
+  
  
  
 
