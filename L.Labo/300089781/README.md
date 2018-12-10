@@ -1,4 +1,4 @@
-## Introduction sur le VPN
+## Introduction sur le VPN (chapitre 10 Linux in Action)
 Le VPN (Virtual Private Network) sert à pouvoir accéder à Internet en toute sécurité depuis votre ordinateur lorsque vous êtes connecté à un réseau non sécurisé et permet de traverser ces réseaux non approuvés de manière sécurisée. Le VPN dissimule souvent votre adresse IP réelle, il entraînera presque certainement l'obtention d'une adresse IP différente, il protégera les données que vous transférez via le WiFi public et permet de masquer notre position actuelle. Par exemple, avec le VPN, les utilisateurs peuvent choisir le pays d'origine de leur connexion Internet.
 
 ## Prérequis pour installer un VPN :warning:
