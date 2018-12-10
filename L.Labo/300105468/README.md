@@ -83,7 +83,7 @@ Il est possible ensuite dans la section "Share définitions" d'ajouter des parta
 ```
 ## Configuration du fichier smb.conf
 ```
-# nano /etc/samba/smb.config
+# nano /etc/samba/smb.conf
 ```
 ![Alt_tag](Cap1.png)
 
