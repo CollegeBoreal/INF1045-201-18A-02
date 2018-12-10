@@ -7,7 +7,7 @@ Vous pouvez l’installer sur un server, ou sur une machine virtuelle (VM).😍
 
 NextCloud supporte Windows, Mac, Linux, Android et iOS.   
 
-Installation de NEXTCLOUD
+## Installation de NEXTCLOUD
 
 Il y a deux maniere possible:🤦‍♂️
 Rapide avec SNAP et manuelle(ici presente)👌
