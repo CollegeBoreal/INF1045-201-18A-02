@@ -98,19 +98,55 @@ Il est possible ensuite dans la section "Share définitions" d'ajouter des parta
 ```
 ![Alt_tag](Cap2.png)
 
-## Un problème à éviter:
+## Puis la commande Su Sambauser
+Après avoir lancé la commande dans git bash, il vous presentera une extention et en vous demandant le mot de passe que vous aviez utiliser lors de la création du compte Sanba.
+```
+thierno@genericVM:~$ su sambauser
+Password:xxxxxxxxxxxx
+sambauser@genericVM:/home/thierno$ 
 
-Le compte utilisateur SAMBA dispose de moins de privilèges que le compte root. Si vous partagez un répertoire et que vous faites les manipulations sous le compte root, faites attention aux droits, car si root est propriétaire (chmod 777), le client SAMBA ne pourra pas accéder au disque.Les droits SAMBA ne peuvent pas outrepasse les droits Linux, cf exemple ci-dessus pour donner des droits.
+```
+## La commande smbclient //localhost/sharehome
 
-Voir man smbpasswd ou smbpasswd --help pour le mode d'utilisation de la commande.
+```
+sambauser@genericVM:/home/thierno$ smbclient //localhost/sharehome
+WARNING: The "syslog" option is deprecated
+Enter WORKGROUP\sambauser's password:
+Try "help" to get a list of possible commands.
+smb: \> ls
+  .                                   D        0  Mon Nov 26 15:50:30 2018
+  ..                                  D        0  Mon Nov 19 14:47:38 2018
+  CONTACT.html                        A     1121  Tue Nov 20 11:18:51 2018
+  images                              D        0  Mon Nov 26 15:41:36 2018
+  Git-2.18.0-64-bit.exe               A 41126928  Wed Sep 12 14:47:56 2018
+  GALLERIE_12.jpg                     A     8057  Tue Nov 13 17:11:42 2018
+  css                                 D        0  Mon Nov 26 15:41:33 2018
+  SERVICES.html                       A     4436  Tue Nov 20 11:31:41 2018
+  GALLERIE.html                       A     4053  Tue Nov 20 10:40:43 2018
+  HOME.html                           A     3010  Tue Nov 20 11:21:09 2018
+  myfile                              N        0  Mon Nov 26 14:52:11 2018
+  debug.log                           A     1292  Tue Nov 13 16:37:24 2018
 
-Remarques :
+                280142704 blocks of size 1024. 139034556 blocks available
+```
+## NB: pour changer $ en # on utilise la commande sudo -i
 
-* Les manipulations peuvent paraître fastidieuses si vous avez un grand nombre de comptes utilisateurs à créer.
+## La commande netstat -tulpn | egrep smbd
+```
 
-* Si vous disposez de nombreux comptes d'utilisateurs sur votre système Linux, il est possible de créer sans difficulté un script qui, a partir d'un fichier texte crée les comptes systèmes et les comptes SAMBA (voir à la fin du TP Samba).
+root@genericVM:~# netstat -tulpn | egrep smbd
+tcp        0      0 0.0.0.0:445             0.0.0.0:*               LISTEN      9481/smbd
+tcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN      9481/smbd
+tcp6       0      0 :::445                  :::*                    LISTEN      9481/smbd
+tcp6       0      0 :::139                  :::*                    LISTEN      9481/smbd
+root@genericVM:~#
+```
 
+## Accessing a Samba server from windows
 
+```
+\\192.168.1.23\sharehome
+```
  
 
 
