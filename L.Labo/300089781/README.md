@@ -125,6 +125,7 @@ log openvpn.log
 ;log-append  openvpn.log
 verb 3
 ```
+** Notez qu'un point-virgule (;) indique à OpenVPN de ne pas lire ni exécuter la ligne suivante.
 :raised_hands: Pour terminer avec le client, il faut seulement faire la commande:
 ```
 $ systemctl start openvpn
@@ -179,13 +180,13 @@ $ ip addr
 ```
 ![Alt_tag](tunfinal.png)
 
-:exclamation: Comme vous pouvez voir, la dernière ligne #10 sur le serveur montre que le tunnel a été créé! Pour voir si nous pouvons nous connecter du client au serveur, il suffit de faire un ping sur le terminal client cb-dev avec l'adresse LOCAL du serveur az-cb-prod que le VPN a créé pour le tunnel:
+:exclamation: Comme vous pouvez voir, la dernière ligne #9 ci-dessus pour le client et la dernière ligne #10 ci-dessous pour le serveur montre que le tunnel a été créé! Pour voir si nous pouvons nous connecter du client au serveur, il suffit de faire un ping sur le terminal client cb-dev avec l'adresse LOCAL du serveur az-cb-prod que le VPN a créé pour le tunnel:
 ![Alt_tag](pingserver.png)
 ![Alt_tag](pingclient.png)
 
 :heavy_check_mark: Dernière étape, tester le VPN en fesant la commande suivante:
 ```
-$ curl 10.8.0.1:4200il
+$ curl 10.8.0.1:4200
 ```
 ![Alt_tag](curl.png)
 Et voici le résultat final! Vous pouvez vous connecter à distance grâce au VPN! Il suffit d'écrire l'adresse IP de votre serveur (pour moi la az-cb-prod 104.211.2.218) dans le URL d'une page internet et puis voir le résultat final!
