@@ -90,7 +90,7 @@ ensuite repondez au question en suivant ce guide ci-dessous.
     
     
 Sur le site de Nextcloud telecharger la derniere version gratuite
-```$ wget https://download.nextcloud.com/server/releases/nextcloud-12.0.0.tar bz2```
+```$ wget https://download.nextcloud.com/server/releases/nextcloud-12.0.0.tar.bz2```
 
 Enfin ouvrer une page index
 ``` 10.12.237.12 nexcloud```
