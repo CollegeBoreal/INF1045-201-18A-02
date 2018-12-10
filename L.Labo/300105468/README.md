@@ -85,6 +85,7 @@ Il est possible ensuite dans la section "Share définitions" d'ajouter des parta
 ```
 # nano /etc/samba/smb.config
 ```
+![Alt_tag](Cap1.png)
 
 ## Un problème à éviter:
 
